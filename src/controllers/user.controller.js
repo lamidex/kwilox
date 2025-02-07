@@ -3,8 +3,6 @@ const Drink = require('../models/drink.model');
 
 exports.save_drink = async (req,res) => {
     const {name, expirydate, quantity} = req.body;
-    console.log('im here');
-
     try {
         if(!name || !expirydate || !quantity){
             return res.status(400).json({message: "All fields are required"});
@@ -14,7 +12,6 @@ exports.save_drink = async (req,res) => {
             return res.status(400).json({message: "Drink already exist"});
         }
         const saveDrink = new Drink({name, expirydate, quantity});
-
         await saveDrink.save();
         return res
         .status(201)

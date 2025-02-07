@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const drinkSchema = new mongoose.Schema(
     {
         name: String,
-        expirydate: {type: String, unique: true},
-        quantity: {type: Number, unique: true}, 
+        expirydate: {type: String, unique: false},
+        quantity: {type: Number, unique: false}, 
     },
      {
         versionKey: false,

@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/save', save_drink)
 router.get('/get', get_drink)
-router.put('/update/:id', update_drink)
+//router.put('/update/:id', update_drink)
 
 
 
